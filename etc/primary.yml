@@ -1,0 +1,15 @@
+mount-dir: "./var/primary/mount"
+
+data-dir: "./var/primary/data"
+
+gameapp: "./hypercorn-wrapper.sh game --bind app.local.gd:$PORT"
+
+http:
+  
+  addr: ":5100"
+  
+static:
+  primary: true
+  hostname: "tuffix-vm"
+  advertise-url: "http://127.0.0.1:5100"
+  
